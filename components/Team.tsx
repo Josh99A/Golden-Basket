@@ -1,22 +1,7 @@
 
 import Image from 'next/image';
-const team = [
-  {
-    name: 'Frances Philippa Eluzai',
-    role: 'Founder and CEO',
-    image: '/team/frances.jpg'
-  },
-  {
-    name: 'Linda Diana',
-    role: 'Administrative Manager',
-    image: '/team/linda.jpg'
-  },
-  {
-    name: 'Ameygoun Desai',
-    role: 'Operations/IT Manager',
-    image: '/team/desai.jpg'
-  }
-];
+import { team } from '../constants'
+
 
 export default function Team() {
   return (
