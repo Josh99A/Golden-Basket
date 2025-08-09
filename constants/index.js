@@ -2,17 +2,17 @@ const team = [
   {
     name: 'Frances Philippa Eluzai',
     role: 'Founder and CEO',
-    image: '/Images/frances.png'
+    image: '/Images/team/frances.png'
   },
   {
     name: 'Linda Diana',
     role: 'Administrative Manager',
-    image: '/Images/lindrio.png'
+    image: '/Images/team/lindrio.png'
   },
   {
-    name: 'Ameygoun Desai',
+    name: 'Amegovu Donald',
     role: 'Operations/IT Manager',
-    image: '/Images/ame.png'
+    image: '/Images/team/ame.png'
   }
 ];
 
