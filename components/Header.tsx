@@ -16,7 +16,7 @@ const Header = () => {
         <Link href="/">
           <div className="rounded-full bg-light-gold-tint flex items-center justify-center w-16 h-16 md:w-20 md:h-20">
             <Image
-              src="/GB_logo.png"
+              src="/Images/GB_logo.png"
               alt="Golden Basket Logo"
               width={60}
               height={60}

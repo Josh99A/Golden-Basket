@@ -4,9 +4,10 @@ import 'animate.css'
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Team from '@/components/Team';
-import Testimonials from '@/components/Testimonials';
 import Partners from '@/components/Partners';
 import GoToTopButton from '@/components/GoToTop';
+import TestimonialCard from '@/components/Testimonials';
+import { testimonials } from '@/constants';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
           <div className="relative z-10 max-w-2xl">
             <h1 className="text-4xl text-gold  md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Fresh Catfish, Empowering Communities.</h1>
             <p className="text-lg text-light-gold-tint mb-6 animate__animated animate__fadeIn animate__delay-1s">Golden Basket Ltd is transforming livelihoods through sustainable fish production.</p>
-            <button className="animate__animated animate__pulse animate__infinite">Learn more</button>
+            <button className="animate__animated animate__pulse animate__infinite action">Learn more</button>
           </div>
       </section>
 
@@ -51,7 +52,7 @@ export default function Home() {
         <Team />
       </section>
 
-      <section className="bg-[url(/Images/work_with_us.jpg)] text-center px-4 md:px-16 py-20 text-white">
+      {/* <section className="bg-[url(/Images/work_with_us.jpg)] text-center px-4 md:px-16 py-20 text-white">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-2xl font-bold mb-4 ">Work with us</h3>
           <p className="mb-6">
@@ -59,11 +60,16 @@ export default function Home() {
           </p>
           <button className="bg-gold font-semibold px-6 py-3 rounded">Contact us</button>
         </div>
-      </section>
+      </section> */}
+      
 
       <section className="bg-white px-4 md:px-16 py-20">
         <h2 className="text-3xl font-bold text-center mb-10">Hear From Our Major Customers</h2>
-        <Testimonials />
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {testimonials.map((t, idx) => (
+        <TestimonialCard key={idx} {...t} />
+      ))}
+    </div>
       </section>
 
       <section className="bg-[#f4e8c1] text-center px-4 md:px-16 py-20">
