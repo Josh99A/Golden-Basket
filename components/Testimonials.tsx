@@ -1,6 +1,14 @@
 import Image from "next/image";
 
-export default function TestimonialCard({ image, name, role, testimonial, location }) {
+type TestimonialCardProps = {
+  image: string;
+  name: string;
+  role: string;
+  testimonial: string;
+  location: string;
+};
+
+export default function TestimonialCard({ image, name, role, testimonial, location }: TestimonialCardProps) {
   return (
     <div className="bg-[#E7D59E] p-6 rounded-lg shadow-md flex flex-col gap-4">
       {/* Profile & Role */}
