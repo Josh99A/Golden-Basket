@@ -8,8 +8,37 @@ import Partners from '@/components/Partners';
 import GoToTopButton from '@/components/GoToTop';
 import TestimonialCard from '@/components/Testimonials';
 import { testimonials } from '@/constants';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Home() {
+
+  const isMobile = useMediaQuery({maxWidth:767});
+
+  const  testimonialSlider = ()=>{
+    return <>
+      <Swiper
+        spaceBetween={30}
+        slidesPerView= {isMobile ? 1 : 2}
+        loop={true}
+        // centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+        className="mySwiper w-full"
+      >
+        {testimonials.map((t, idx) => (
+        <SwiperSlide key={idx} ><TestimonialCard  {...t} /></SwiperSlide>
+      ))}
+        
+        
+        
+      </Swiper>
+    </>
+  }
   return (
     <main className="min-h-screen bg-light-gold-tint text-[#2c2c2c] overflow-x-hidden">
       <Header />
@@ -65,10 +94,9 @@ export default function Home() {
 
       <section className="bg-white px-4 md:px-16 py-20">
         <h2 className="text-3xl font-bold text-center mb-10">Hear From Our Major Customers</h2>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {testimonials.map((t, idx) => (
-        <TestimonialCard key={idx} {...t} />
-      ))}
+      <div className="grid gap-6">
+      { testimonialSlider() }
+     
     </div>
       </section>
 

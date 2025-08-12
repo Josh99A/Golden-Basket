@@ -30,7 +30,7 @@ export default function TestimonialCard({ image, name, role, testimonial, locati
       </div>
 
       {/* Location */}
-      <p className="text-[#006D77] font-semibold text-sm mt-auto">{location}</p>
+      <p className="text-primary-text font-semibold text-sm mt-auto">{location}</p>
     </div>
   );
 }
