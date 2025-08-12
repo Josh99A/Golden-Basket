@@ -1,11 +1,8 @@
 'use client';
 import Image from 'next/image'
 import 'animate.css'
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Team from '@/components/Team';
 import Partners from '@/components/Partners';
-import GoToTopButton from '@/components/GoToTop';
 import TestimonialCard from '@/components/Testimonials';
 import { testimonials } from '@/constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
