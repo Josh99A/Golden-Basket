@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { FaFacebook, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { MdEmail } from "react-icons/md";
+import { IoCall } from "react-icons/io5";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +16,39 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
+    <>
+    <section className="hidden md:flex top-0 bg-light-gold-tint mx-auto  justify-between items-center w-full px-4">
+    <div className='flex items-center  text-sm p-4 '>
+     <div className="flex items-center gap-2  text-sm p-4">
+            <HiOutlineLocationMarker className="text-gold text-lg " />
+            <span>Wakiso district, Uganda</span>
+      </div>
+       <div className="flex items-center gap-2 p-4 text-sm">
+            <MdEmail className="text-gold text-lg" />
+            <span>info@goldenbasket.ug</span>
+          </div>
+          <div className="flex items-center gap-2 p-4 text-sm">
+            <IoCall className="text-gold text-lg" />
+            <span>0772421174 / 0756718377</span>
+          </div>
+      </div>
+      <div>
+         <div className="flex gap-4 text-2xl">
+            <Link href="#" className="hover:opacity-80">
+              <FaFacebook className="text-blue-500" />
+            </Link>
+            <Link href="#" className="hover:opacity-80">
+              <FaWhatsapp className="text-green-500" />
+            </Link>
+            <Link href="#" className="hover:opacity-80">
+              <FaXTwitter className="text-black bg-white rounded-full p-[2px]" />
+            </Link>
+            <Link href="#" className="hover:opacity-80">
+              <FaYoutube className="text-red-600" />
+            </Link>
+          </div>
+      </div>
+    </section>
     <header className="bg-dark-green text-white  px-4 md:px-16 py-4 shadow-lg top-0 z-50">
       <div className="flex justify-between items-center">
         <Link href="/">
@@ -54,6 +92,7 @@ const Header = () => {
         </nav>
       )}
     </header>
+    </>
   );
 };
 

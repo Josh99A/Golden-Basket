@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Column 1: Company Info */}
         <div className="border-b md:border-b-0 md:border-r border-gray-600 pr-4">
           <div className="mb-4 flex items-center">
-            <div className="rounded-full bg-[#F5E6A2] flex items-center justify-center w-20 h-20">
+            <div className="rounded-full bg-light-gold-tint flex items-center justify-center w-20 h-20">
               <Image
                 src="/Images/GB_logo.png"
                 alt="Golden Basket Logo"
@@ -24,7 +24,7 @@ export default function Footer() {
               />
             </div>
           </div>
-          <h2 className="text-lg font-semibold mb-1 text-[#E3B23C]">
+          <h2 className="text-lg font-semibold mb-1 text-gold">
             Golden Basket Ltd
           </h2>
           <p className="text-sm mb-3">Your choice of value.</p>
@@ -33,37 +33,37 @@ export default function Footer() {
             livelihoods through sustainable agribusiness. We specialize in
             producing and supplying high-quality catfish.
           </p>
-          <Link href="#" className="text-xs text-[#E3B23C] hover:underline">
+          <Link href="#" className="text-xs text-gold hover:underline">
             read more...
           </Link>
         </div>
 
         {/* Column 2: Explore */}
         <div className="border-b md:border-b-0 md:border-r border-gray-600 px-4">
-          <h3 className="text-lg font-semibold mb-4 text-[#E3B23C]">Explore</h3>
+          <h3 className="text-lg font-semibold mb-4 text-gold">Explore</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link href="/" className="hover:text-[#E3B23C]">
+              <Link href="/" className="hover:text-gold">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-[#E3B23C]">
+              <Link href="/about" className="hover:text-gold">
                 About us
               </Link>
             </li>
             <li>
-              <Link href="/media" className="hover:text-[#E3B23C]">
+              <Link href="/media" className="hover:text-gold">
                 Media
               </Link>
             </li>
             <li>
-              <Link href="/products" className="hover:text-[#E3B23C]">
+              <Link href="/products" className="hover:text-gold">
                 Products
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-[#E3B23C]">
+              <Link href="/projects" className="hover:text-gold">
                 Projects
               </Link>
             </li>
@@ -72,19 +72,19 @@ export default function Footer() {
 
         {/* Column 3: Contact Info */}
         <div className="px-4">
-          <h3 className="text-lg font-semibold mb-4 text-[#E3B23C]">
+          <h3 className="text-lg font-semibold mb-4 text-gold">
             Contact Information
           </h3>
           <div className="flex items-center gap-2 mb-3 text-sm">
-            <HiOutlineLocationMarker className="text-[#E3B23C] text-lg" />
+            <HiOutlineLocationMarker className="text-gold text-lg" />
             <span>Wakiso district, Uganda</span>
           </div>
           <div className="flex items-center gap-2 mb-3 text-sm">
-            <MdEmail className="text-[#E3B23C] text-lg" />
+            <MdEmail className="text-gold text-lg" />
             <span>info@goldenbasket.ug</span>
           </div>
           <div className="flex items-center gap-2 mb-4 text-sm">
-            <IoCall className="text-[#E3B23C] text-lg" />
+            <IoCall className="text-gold text-lg" />
             <span>0772421174 / 0756718377</span>
           </div>
 
