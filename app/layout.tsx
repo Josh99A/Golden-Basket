@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,6 +9,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import GoToTopButton from "@/components/GoToTop";
+import Footer from "@/components/Footer";
 
 
 const geistSans = Geist({
@@ -33,9 +36,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+      
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <main className="min-h-screen bg-light-gold-tint text-[#2c2c2c] overflow-x-hidden">
+        <Header />
         {children}
+        <GoToTopButton/>
+        <Footer />
+
+        </main>
       </body>
     </html>
   );

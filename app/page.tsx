@@ -40,8 +40,8 @@ export default function Home() {
     </>
   }
   return (
-    <main className="min-h-screen bg-light-gold-tint text-[#2c2c2c] overflow-x-hidden">
-      <Header />
+    
+    <>
       <section className="relative bg-black text-white py-24 px-4 md:px-16">
           <div className="absolute inset-0 z-0">
             <Image src="/Images/catfish-bg.jpg" alt="Catfish" layout="fill" objectFit="cover" className="opacity-30 " />
@@ -60,7 +60,7 @@ export default function Home() {
             <p className="leading-relaxed">
               Founded in 2019, Golden Basket Ltd is a Ugandan agribusiness company committed to driving socio-economic transformation through sustainable food production. Our mission is to empower communities by producing high-quality, nutritious, and affordable agricultural products—starting with catfish farming and expanding into poultry, crop farming, and more.
             </p>
-            <a href="#" className="text-[#183d1c] font-semibold mt-4 inline-block">Read more...</a>
+            <a href="#" className="text-dark-green hover:text-gold transition font-semibold mt-4 inline-block">Read more...</a>
         </div>
           <div>
             <h3 className="text-2xl font-bold mb-4 text-gold">Our Vision</h3>
@@ -71,7 +71,7 @@ export default function Home() {
               <li>To empower communities through job creation and innovation.</li>
               <li>To contribute to food security and economic growth.</li>
             </ul>
-            <a href="#" className="text-dark-green font-semibold mt-4 inline-block">Find out more...</a>
+            <a href="/about" className="text-dark-green hover:text-gold transition font-semibold mt-4 inline-block">Find out more...</a>
         </div>
         </div>
       </section>
@@ -100,13 +100,10 @@ export default function Home() {
     </div>
       </section>
 
-      <section className="bg-olive-green text-center px-4 md:px-16 py-20">
+      <section className="bg-olive-green/90 text-center px-4 md:px-16 py-20">
         <h2 className="text-3xl font-bold mb-10 text-gold">Our Partners</h2>
         <Partners />
       </section>
-
-      <Footer />
-      <GoToTopButton/>
-    </main>
+    </>  
   );
 }
