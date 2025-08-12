@@ -8,6 +8,7 @@ import { testimonials } from '@/constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { useMediaQuery } from 'react-responsive';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -46,7 +47,9 @@ export default function Home() {
           <div className="relative z-10 max-w-2xl">
             <h1 className="text-4xl text-gold  md:text-5xl font-bold mb-4 animate__animated animate__fadeInDown">Fresh Catfish, Empowering Communities.</h1>
             <p className="text-lg text-light-gold-tint mb-6 animate__animated animate__fadeIn animate__delay-1s">Golden Basket Ltd is transforming livelihoods through sustainable fish production.</p>
-            <button className="animate__animated animate__pulse animate__infinite action">Learn more</button>
+            <Link href="/about">
+              <button className="animate__animated animate__pulse animate__infinite action">Learn more</button>
+            </Link>
           </div>
       </section>
 
@@ -57,7 +60,7 @@ export default function Home() {
             <p className="leading-relaxed">
               Founded in 2019, Golden Basket Ltd is a Ugandan agribusiness company committed to driving socio-economic transformation through sustainable food production. Our mission is to empower communities by producing high-quality, nutritious, and affordable agricultural products—starting with catfish farming and expanding into poultry, crop farming, and more.
             </p>
-            <a href="#" className="text-dark-green hover:text-gold transition font-semibold mt-4 inline-block">Read more...</a>
+            <Link href="/about" className="text-dark-green hover:text-gold transition font-semibold mt-4 inline-block">Read more...</Link>
         </div>
           <div>
             <h3 className="text-2xl font-bold mb-4 text-gold">Our Vision</h3>
@@ -68,7 +71,7 @@ export default function Home() {
               <li>To empower communities through job creation and innovation.</li>
               <li>To contribute to food security and economic growth.</li>
             </ul>
-            <a href="/about" className="text-dark-green hover:text-gold transition font-semibold mt-4 inline-block">Find out more...</a>
+            <Link href="/about" className="text-dark-green hover:text-gold transition font-semibold mt-4 inline-block">Find out more...</Link>
         </div>
         </div>
       </section>

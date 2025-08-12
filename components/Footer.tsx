@@ -33,7 +33,7 @@ export default function Footer() {
             livelihoods through sustainable agribusiness. We specialize in
             producing and supplying high-quality catfish.
           </p>
-          <Link href="#" className="text-xs text-gold hover:underline">
+          <Link href="/about" className="text-xs text-gold hover:underline">
             read more...
           </Link>
         </div>
