@@ -35,9 +35,16 @@ const testimonials = [
   },
 ];
 
+const partners = [
+  '/Images/partners/dfcu_Foundation.png',
+  '/Images/partners/hi_innovators.svg',
+  '/Images/partners/Imuka-logo.png',
+];
+
 
 
 export {
   team,
-  testimonials
+  testimonials,
+  partners
 }

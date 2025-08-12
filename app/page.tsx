@@ -9,7 +9,7 @@ import GoToTopButton from '@/components/GoToTop';
 import TestimonialCard from '@/components/Testimonials';
 import { testimonials } from '@/constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { useMediaQuery } from 'react-responsive';
 
 export default function Home() {
@@ -56,14 +56,14 @@ export default function Home() {
       <section className="px-4 md:px-16 py-20 animate__animated animate__bounce">
         <div className="grid md:grid-cols-2 gap-8">
          <div>
-            <h3 className="text-2xl font-bold mb-4">Who we Are?</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gold">Who we Are?</h3>
             <p className="leading-relaxed">
               Founded in 2019, Golden Basket Ltd is a Ugandan agribusiness company committed to driving socio-economic transformation through sustainable food production. Our mission is to empower communities by producing high-quality, nutritious, and affordable agricultural products—starting with catfish farming and expanding into poultry, crop farming, and more.
             </p>
             <a href="#" className="text-[#183d1c] font-semibold mt-4 inline-block">Read more...</a>
         </div>
           <div>
-            <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gold">Our Vision</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>To become a leading force in African agribusiness.</li>
               <li>To promote sustainable and responsible farming practices.</li>
@@ -71,37 +71,37 @@ export default function Home() {
               <li>To empower communities through job creation and innovation.</li>
               <li>To contribute to food security and economic growth.</li>
             </ul>
-            <a href="#" className="text-[#183d1c] font-semibold mt-4 inline-block">Find out more...</a>
+            <a href="#" className="text-dark-green font-semibold mt-4 inline-block">Find out more...</a>
         </div>
         </div>
       </section>
 
-      <section className="bg-[#183d1c] text-white px-4 md:px-16 py-20">
+      <section className="bg-[#183d1c] text-gold px-4 md:px-16 py-20">
         <h2 className="text-3xl font-bold mb-10 text-center">Our team</h2>
         <Team />
       </section>
 
-      {/* <section className="bg-[url(/Images/work_with_us.jpg)] text-center px-4 md:px-16 py-20 text-white">
+      <section className="bg-[url(/Images/work_with_us.jpg)] text-center px-4 md:px-16 py-20 text-white">
         <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold mb-4 ">Work with us</h3>
+          <h3 className="text-2xl font-bold mb-4 text-gold">Work with us</h3>
           <p className="mb-6">
             Whether you&apos;re a farmer, distributor, researcher, or passionate about agribusiness, we&apos;d love to hear from you! Partner with us to bring sustainable food solutions to communities and make a lasting impact.
           </p>
           <button className="bg-gold font-semibold px-6 py-3 rounded">Contact us</button>
         </div>
-      </section> */}
+      </section>
       
 
       <section className="bg-white px-4 md:px-16 py-20">
-        <h2 className="text-3xl font-bold text-center mb-10">Hear From Our Major Customers</h2>
+        <h2 className="text-3xl font-bold text-center mb-10 text-gold">Hear From Our Major Customers</h2>
       <div className="grid gap-6">
       { testimonialSlider() }
      
     </div>
       </section>
 
-      <section className="bg-[#f4e8c1] text-center px-4 md:px-16 py-20">
-        <h2 className="text-3xl font-bold mb-10">Our Partners</h2>
+      <section className="bg-olive-green text-center px-4 md:px-16 py-20">
+        <h2 className="text-3xl font-bold mb-10 text-gold">Our Partners</h2>
         <Partners />
       </section>
 
