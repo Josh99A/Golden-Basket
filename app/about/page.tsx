@@ -1,5 +1,6 @@
 // app/about/page.jsx
 import Image from "next/image";
+import { FaQuoteLeft } from "react-icons/fa";
 
 export default function AboutPage() {
   const timelineData = [
@@ -60,14 +61,14 @@ export default function AboutPage() {
           <div>
             <div className="relative h-64 mb-6">
               <Image
-                src="/images/vision1.jpg"
+                src="/Images/vision_1.png"
                 alt="Vision"
                 width={250}
                 height={250}
                 className="absolute top-0 left-0 w-48 h-48 object-cover rounded-xl shadow-lg z-20"
               />
               <Image
-                src="/images/vision2.jpg"
+                src="/Images/vision_2.png"
                 alt="Vision 2"
                 width={250}
                 height={250}
@@ -86,14 +87,14 @@ export default function AboutPage() {
           <div>
             <div className="relative h-64 mb-6">
               <Image
-                src="/images/mission1.jpg"
+                src="/Images/mission_2.png"
                 alt="Mission"
                 width={250}
                 height={250}
                 className="absolute top-0 left-0 w-48 h-48 object-cover rounded-xl shadow-lg z-20"
               />
               <Image
-                src="/images/mission2.jpg"
+                src="/Images/mission_1.png"
                 alt="Mission 2"
                 width={250}
                 height={250}
@@ -109,6 +110,40 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <section className="bg-light-gold-tint px-6 lg:px-16 py-16">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        
+        {/* CEO Image */}
+        <div className="relative group">
+          <div className="overflow-hidden rounded-xl shadow-lg border-4 border-[#F6B81A]">
+            <Image
+              src="/Images/Likia.jpeg" // replace with actual CEO image path
+              alt="CEO of Golden Basket"
+              width={500}
+              height={500}
+              className="object-cover w-full h-full transform group-hover:scale-105 transition duration-500 ease-in-out"
+            />
+          </div>
+        </div>
+
+        {/* CEO Speech */}
+        <div>
+          <h2 className="text-dark-green text-3xl lg:text-4xl font-bold mb-6">Our Story</h2>
+          <div className="relative bg-white border-l-4 border-gold p-6 rounded-lg shadow-lg">
+            <FaQuoteLeft className="text-gold text-4xl absolute -top-4 -left-4" />
+            <p className="text-[#333333] text-lg leading-relaxed">
+              Golden Basket Ltd, founded in 2019 in Bweyale, Uganda, is committed to transforming lives through sustainable agriculture. Starting with subsistence farming, we expanded into poultry, and later, in response to COVID-19 challenges, launched a flagship catfish farming project in 2021 to provide affordable, high-quality protein.
+Today, we focus on fresh catfish production while preparing for future ventures in value addition, crop farming, and agribusiness export. Our vision is the Smart Farm Agri-Empowerment Centre — a hub for production, agro-processing, trading, e-commerce, and community training.
+With a passionate team and a clear purpose, Golden Basket is becoming a trusted name in Uganda’s agricultural sector, empowering households, creating jobs, and building a more resilient future.
+            </p>
+            <p className="text-[#204E36] font-semibold mt-6">
+              — Frances Philippa Eluzai, CEO & Founder
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
       {/* Timeline */}
       <section className="py-16 px-6 lg:px-16 bg-[#204E36] text-white">
