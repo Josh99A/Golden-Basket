@@ -25,36 +25,39 @@ const lifecycleStages = [
       { label: 'Grading Interval', value: 'Every 14 Days' },
       { label: 'Species', value: 'Clarias gariepinus' },
     ],
-    image: '/Images/DFCU_pic.jpg',
-    caption: 'Hatchery grading and enterprise recognition in Wakiso District.',
+    image: '/Images/mission_2.png',
+    objectPosition: 'object-center',
+    caption: 'Live graded African catfish stock in our Gayaza holding basin.',
   },
   {
     index: '02',
     code: 'STAGE 02 / SOLAR AQUACULTURE',
     title: '6 Concrete Tanks Powered by Solar Circulation',
     summary:
-      'Commissioned in 2023 with seed backing from the NSSF Hi-Innovator Program, our six reinforced concrete tanks run on continuous solar-pumped water oxygenation—eliminating grid fuel dependency while maintaining dissolved oxygen.',
+      'Commissioned in 2023 with seed backing from the NSSF Hi-Innovator Program, our six reinforced concrete tanks and reservoirs run on solar-pumped water oxygenation—eliminating grid fuel dependency while maintaining dissolved oxygen.',
     specs: [
       { label: 'Infrastructure', value: '6 Concrete Tanks' },
       { label: 'Energy Source', value: '100% Off-Grid Solar' },
       { label: 'Water Exchange', value: 'Continuous Recirculation' },
     ],
-    image: '/Images/Ame.jpg',
-    caption: 'Concrete tank management and water quality monitoring at Gayaza.',
+    image: '/Images/mission_1.png',
+    objectPosition: 'object-center',
+    caption: 'Stone-lined aquaculture reservoir and tank infrastructure at Gayaza.',
   },
   {
     index: '03',
     code: 'STAGE 03 / CLEAN-WATER NUTRITION',
-    title: 'High-Protein Feed & Zero-Hormone Growth',
+    title: 'High-Protein Feed & Field Team Stewardship',
     summary:
-      'Our catfish are raised in clean, circulating freshwater on balanced floating pellets without growth hormones or preventative antibiotics—resulting in firm, sweet white flesh prized by Kampala kitchens and hotels.',
+      'Our catfish are raised in clean, circulating freshwater on balanced floating pellets without growth hormones or preventative antibiotics—managed daily by our on-site Gayaza aquaculture technicians.',
     specs: [
       { label: 'Grow-Out Cycle', value: '5 – 6 Months' },
       { label: 'Average Table Weight', value: '0.8 kg – 1.5 kg' },
       { label: 'Water Quality', value: 'Daily pH & DO Logs' },
     ],
-    image: '/Images/vision_1.png',
-    caption: 'Balanced nutrition and strict pond hygiene protocols.',
+    image: '/Images/Ame.jpg',
+    objectPosition: 'object-[50%_20%]',
+    caption: 'Operations team inspecting harvest readiness at the Gayaza farm.',
   },
   {
     index: '04',
@@ -68,6 +71,7 @@ const lifecycleStages = [
       { label: 'Dispatch Window', value: 'Same-Day / 24h' },
     ],
     image: '/Images/catfish-bg.jpg',
+    objectPosition: 'object-center',
     caption: 'Freshly harvested African catfish ready for market dispatch.',
   },
 ];
@@ -81,6 +85,7 @@ const produceCatalog = [
     description:
       'Clean-water catfish harvested to order from our solar-powered concrete tanks in Gayaza. Consistent sizing for hotels, restaurants, supermarkets, and family kitchens.',
     image: '/Images/catfish-bg.jpg',
+    objectPosition: 'object-center',
     inquiryCategory: 'Fresh Catfish Order (Wholesale/Retail)',
   },
   {
@@ -90,17 +95,19 @@ const produceCatalog = [
     specs: 'Batch Booking: 500 – 10,000+ Fingerlings • Acclimatized',
     description:
       'Uniformly graded, disease-free seed stock bred for rapid growth in both concrete tanks and earthen ponds, accompanied by stocking and feeding schedules.',
-    image: '/Images/DFCU_pic.jpg',
+    image: '/Images/mission_2.png',
+    objectPosition: 'object-center',
     inquiryCategory: 'Catfish Fingerlings',
   },
   {
     index: '03',
-    category: 'VALUE ADDITION & DIVERSIFIED CROPS',
+    category: 'VALUE ADDITION & FARM INFRASTRUCTURE',
     title: 'Smoked Catfish, Poultry & Crop Value Chains',
     specs: 'Extended Shelf-Life Protein • Bweyale & Gayaza Farms',
     description:
-      'Kiln-smoked catfish fillets and whole fish alongside our expanding poultry and arable crop operations rooted in our founding Bweyale farmland.',
-    image: '/Images/Ame.jpg',
+      'Kiln-smoked catfish fillets and whole fish alongside our expanding poultry and arable crop operations rooted in our founding Bweyale and Gayaza facilities.',
+    image: '/Images/mission_1.png',
+    objectPosition: 'object-center',
     inquiryCategory: 'Fresh Catfish Order (Wholesale/Retail)',
   },
   {
@@ -110,7 +117,8 @@ const produceCatalog = [
     specs: 'On-Farm Gayaza Workshops • Out-Grower Mentorship',
     description:
       'Hands-on technical advisory for farmers, youth collectives, and NGOs on concrete tank construction, solar water pumping, feed formulation, and unit economics.',
-    image: '/Images/mission_2.png',
+    image: '/Images/DFCU_pic.jpg',
+    objectPosition: 'object-[50%_20%]',
     inquiryCategory: 'Farm Training & Visit',
   },
 ];
@@ -260,14 +268,14 @@ export default function Home() {
 
               <div className="relative h-52 w-full mb-6 overflow-hidden border border-white/10">
                 <Image
-                  src="/Images/Ame.jpg"
-                  alt="Golden Basket solar-powered concrete fish tanks in Gayaza"
+                  src="/Images/mission_1.png"
+                  alt="Golden Basket aquaculture reservoir and solar tank system in Gayaza"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0c1a0e] via-[#0c1a0e]/70 to-transparent p-3.5 flex items-center justify-between text-xs font-mono">
-                  <span className="text-[#d9ae34]">NSSF HI-INNOVATOR COHORT</span>
+                  <span className="text-[#d9ae34]">GAYAZA AQUACULTURE HUB</span>
                   <span className="text-white/80">SOLAR TANK SYSTEM</span>
                 </div>
               </div>
@@ -411,15 +419,15 @@ export default function Home() {
                   <div className="relative h-56 w-full overflow-hidden">
                     <Image
                       src="/Images/vision_1.png"
-                      alt="Aquaculture production at Golden Basket"
+                      alt="NSSF Hi-Innovator seed grant award presentation to Golden Basket"
                       fill
                       sizes="(max-width: 768px) 100vw, 25vw"
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                   </div>
                   <figcaption className="font-mono text-[11px] text-[#455245] pt-3 flex justify-between">
-                    <span>FIG 1.1 — GAYAZA TANKS</span>
-                    <span>WAKISO</span>
+                    <span>FIG 1.1 — NSSF HI-INNOVATOR</span>
+                    <span>2023 AWARD</span>
                   </figcaption>
                 </figure>
 
@@ -427,15 +435,15 @@ export default function Home() {
                   <div className="relative h-56 w-full overflow-hidden">
                     <Image
                       src="/Images/mission_1.png"
-                      alt="Community agribusiness training at Golden Basket"
+                      alt="Aquaculture reservoir and pond infrastructure at Gayaza"
                       fill
                       sizes="(max-width: 768px) 100vw, 25vw"
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                   </div>
                   <figcaption className="font-mono text-[11px] text-[#455245] pt-3 flex justify-between">
-                    <span>FIG 1.2 — FIELD TRAINING</span>
-                    <span>UGANDA</span>
+                    <span>FIG 1.2 — GAYAZA FACILITY</span>
+                    <span>WAKISO</span>
                   </figcaption>
                 </figure>
               </div>
@@ -581,7 +589,7 @@ export default function Home() {
                   alt={currentStage.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
-                  className="object-cover"
+                  className={`object-cover ${currentStage.objectPosition}`}
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0c1a0e] via-[#0c1a0e]/75 to-transparent p-4 text-xs font-mono text-[#efe7d3]">
                   {currentStage.caption}
@@ -609,7 +617,7 @@ export default function Home() {
                       alt={item.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover group-hover:scale-103 transition-transform duration-500"
+                      className={`object-cover ${item.objectPosition} group-hover:scale-103 transition-transform duration-500`}
                     />
                   </div>
 

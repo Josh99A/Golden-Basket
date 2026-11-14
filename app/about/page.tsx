@@ -206,7 +206,7 @@ export default function AboutPage() {
                     alt="Golden Basket leadership and recognition"
                     fill
                     sizes="(max-width: 768px) 280px, 340px"
-                    className="object-cover"
+                    className="object-cover object-[50%_20%]"
                   />
                 </div>
                 <figcaption className="font-mono text-[10px] uppercase tracking-widest text-[#d9ae34] pt-1.5 flex justify-between">
@@ -219,14 +219,14 @@ export default function AboutPage() {
                 <div className="relative w-full h-[calc(100%-24px)] overflow-hidden">
                   <Image
                     src="/Images/Ame.jpg"
-                    alt="Golden Basket concrete aquaculture tanks"
+                    alt="Golden Basket field operations team in Gayaza"
                     fill
                     sizes="(max-width: 768px) 280px, 340px"
-                    className="object-cover"
+                    className="object-cover object-[50%_18%]"
                   />
                 </div>
                 <figcaption className="font-mono text-[10px] uppercase tracking-widest text-white/80 pt-1.5 flex justify-between">
-                  <span>ARCHIVE 02 — SOLAR TANKS</span>
+                  <span>ARCHIVE 02 — FIELD OPERATIONS</span>
                   <span>GAYAZA</span>
                 </figcaption>
               </figure>
@@ -384,7 +384,7 @@ export default function AboutPage() {
                     alt="Frances Philippa Eluzai, CEO & Founder of Golden Basket Ltd"
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"
-                    className="object-cover"
+                    className="object-cover object-[50%_12%]"
                   />
                 </div>
                 <figcaption className="pt-4 flex items-baseline justify-between border-t border-[#122615]/15 mt-4">

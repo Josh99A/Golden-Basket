@@ -35,7 +35,7 @@ export default function TestimonialCard({
             alt={name}
             fill
             sizes="48px"
-            className="object-cover"
+            className="object-cover object-[50%_20%]"
           />
         </div>
         <div>
