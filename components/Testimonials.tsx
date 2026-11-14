@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Star, Quote, MapPin } from 'lucide-react';
 
 type TestimonialCardProps = {
   image: string;
@@ -17,59 +16,37 @@ export default function TestimonialCard({
   location,
 }: TestimonialCardProps) {
   return (
-    <div className="bg-[#FAF7F0] border border-[#e1bb3f]/40 hover:border-[#e1bb3f] p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full relative overflow-hidden">
-      {/* Decorative Quote Icon */}
-      <Quote
-        aria-hidden="true"
-        className="w-12 h-12 text-[#e1bb3f]/25 absolute top-6 right-6 pointer-events-none"
-      />
-
+    <article className="bg-[#f6f2e9] border-t-2 border-[#122615] p-7 sm:p-9 flex flex-col justify-between h-full transition-colors hover:bg-[#efe7d3]/70">
       <div>
-        {/* Star Rating */}
-        <div className="flex items-center gap-1 mb-4" aria-label="5 out of 5 stars">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              className="w-4 h-4 fill-[#e1bb3f] text-[#e1bb3f]"
-              aria-hidden="true"
-            />
-          ))}
+        <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.16em] text-[#122615]/60 mb-6">
+          <span>Buyer &amp; Partner Dispatch</span>
+          <span>{location}, UG</span>
         </div>
 
-        {/* Testimonial Quote */}
-        <blockquote className="text-[#183113]/90 text-sm sm:text-base leading-relaxed italic mb-6 relative z-10">
+        <blockquote className="font-display text-lg sm:text-xl text-[#122615] leading-relaxed mb-8">
           &ldquo;{testimonial}&rdquo;
         </blockquote>
       </div>
 
-      {/* Profile, Role & Location */}
-      <div className="flex items-center justify-between gap-4 pt-4 border-t border-[#e1bb3f]/30 mt-auto">
-        <div className="flex items-center gap-3.5">
-          <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#e1bb3f] shadow-sm shrink-0">
-            <Image
-              src={image}
-              alt={name}
-              fill
-              sizes="56px"
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <h3 className="font-bold text-[#183113] text-base leading-tight">
-              {name}
-            </h3>
-            <p className="text-xs sm:text-sm font-medium text-[#3c6326] mt-0.5">
-              {role}
-            </p>
-          </div>
+      <div className="flex items-center gap-4 pt-5 border-t border-[#122615]/15 mt-auto">
+        <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#122615]/30 shrink-0">
+          <Image
+            src={image}
+            alt={name}
+            fill
+            sizes="48px"
+            className="object-cover"
+          />
         </div>
-
-        <span className="inline-flex items-center gap-1 text-xs font-semibold text-[#183113] bg-[#e1bb3f]/25 px-3 py-1.5 rounded-full shrink-0">
-          <MapPin className="w-3.5 h-3.5 text-[#3c6326]" aria-hidden="true" />
-          {location}
-        </span>
+        <div>
+          <h3 className="font-sans font-bold text-[#122615] text-sm tracking-tight">
+            {name}
+          </h3>
+          <p className="font-mono text-xs text-[#455245] mt-0.5">
+            {role}
+          </p>
+        </div>
       </div>
-    </div>
+    </article>
   );
 }
-

@@ -1,59 +1,69 @@
 'use client';
 
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
 import { partners } from '@/constants';
 
-const partnerNames: Record<string, string> = {
-  '/Images/dfcu_Foundation.png': 'dfcu Foundation',
-  '/Images/hi_innovators.svg': 'NSSF Hi-Innovator',
-  '/Images/Imuka-logo.png': 'Imuka Access',
+const partnerMeta: Record<
+  string,
+  { name: string; role: string; year: string }
+> = {
+  '/Images/partners/dfcu_Foundation.png': {
+    name: 'dfcu Foundation',
+    role: 'Agribusiness Enterprise Development & Capacity Acceleration',
+    year: 'Institutional Partner',
+  },
+  '/Images/partners/hi_innovators.svg': {
+    name: 'NSSF Hi-Innovator Program',
+    role: 'Seed Grant Backer — 6 Concrete Tanks & Solar Water Circulation System',
+    year: '2023 Seed Award',
+  },
+  '/Images/partners/Imuka-logo.png': {
+    name: 'Imuka Access',
+    role: 'Investment Readiness, Business Advisory & Ecosystem Scaling',
+    year: 'Ecosystem Partner',
+  },
 };
 
 export default function Partners() {
   return (
-    <div className="w-full max-w-6xl mx-auto">
-      <Swiper
-        spaceBetween={24}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        pagination={{ clickable: true }}
-        breakpoints={{
-          0: { slidesPerView: 1, spaceBetween: 16 },
-          640: { slidesPerView: 2, spaceBetween: 24 },
-          1024: { slidesPerView: 3, spaceBetween: 30 },
-        }}
-        modules={[Autoplay, Pagination]}
-        className="mySwiper w-full pb-10"
-      >
-        {partners.map((logo, idx) => {
-          const label = partnerNames[logo] || `Partner ${idx + 1}`;
-          return (
-            <SwiperSlide key={idx}>
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-[#e1bb3f]/40 hover:border-[#e1bb3f] hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center h-36 sm:h-40 group">
-                <div className="relative flex items-center justify-center w-full h-20">
-                  <Image
-                    src={logo}
-                    alt={label}
-                    width={180}
-                    height={80}
-                    className="object-contain max-h-20 w-auto group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <span className="mt-3 text-xs font-semibold uppercase tracking-wider text-[#183113]/75">
-                  {label}
-                </span>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+    <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-white/15 max-w-7xl mx-auto">
+      {partners.map((logo, idx) => {
+        const info = partnerMeta[logo] || {
+          name: `Partner 0${idx + 1}`,
+          role: 'Strategic Agribusiness Partner',
+          year: 'Uganda',
+        };
+        return (
+          <div
+            key={logo}
+            className="border-r border-b border-white/15 p-8 sm:p-10 flex flex-col justify-between bg-[#122615] hover:bg-[#19331d] transition-colors group text-left"
+          >
+            <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-widest text-[#d9ae34]/80 mb-8">
+              <span>0{idx + 1}</span>
+              <span>{info.year}</span>
+            </div>
+
+            <div className="bg-[#f6f2e9] px-6 py-5 rounded-sm flex items-center justify-center h-24 mb-8">
+              <Image
+                src={logo}
+                alt={info.name}
+                width={170}
+                height={70}
+                className="object-contain max-h-14 w-auto group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div>
+              <h3 className="font-display text-xl font-bold text-white mb-2">
+                {info.name}
+              </h3>
+              <p className="text-xs sm:text-sm text-[#efe7d3]/75 leading-relaxed">
+                {info.role}
+              </p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
-

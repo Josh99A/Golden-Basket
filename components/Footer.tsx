@@ -2,45 +2,43 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { MdEmail } from "react-icons/md";
-import { IoCall } from "react-icons/io5";
+import { ArrowUpRight } from "lucide-react";
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Our Products", href: "/#products" },
-  { label: "Leadership Team", href: "/#team" },
-  { label: "Customer Stories", href: "/#testimonials" },
-  { label: "Contact & Orders", href: "/contact" },
+  { label: "Company Monograph", href: "/about" },
+  { label: "Produce & Systems", href: "/#products" },
+  { label: "Order & Stocking Calculator", href: "/#calculator" },
+  { label: "Leadership Stewardship", href: "/#team" },
+  { label: "Gayaza Dispatch Desk", href: "/contact" },
 ];
 
 const OFFERINGS = [
-  { label: "Fresh Catfish Supply", href: "/#products" },
-  { label: "Quality Catfish Fingerlings", href: "/#products" },
-  { label: "Sustainable Solar Aquaculture", href: "/about" },
-  { label: "Agribusiness Training & Advisory", href: "/contact" },
-  { label: "Bulk & Restaurant Orders", href: "/contact" },
+  { label: "Fresh Whole & Dressed Catfish", href: "/contact?category=Fresh%20Catfish%20Order%20(Wholesale%2FRetail)" },
+  { label: "Graded Catfish Fingerlings", href: "/contact?category=Catfish%20Fingerlings" },
+  { label: "Kiln-Smoked & Value-Added Fish", href: "/#products" },
+  { label: "Solar Tank Engineering & Advisory", href: "/contact?category=Farm%20Training%20%26%20Visit" },
+  { label: "Institutional & Out-Grower Partnerships", href: "/contact?category=Agribusiness%20Partnership%20%2F%20Grant" },
 ];
 
 const SOCIAL_LINKS = [
   {
-    label: "Follow Golden Basket on Facebook",
-    href: "https://facebook.com",
-    icon: FaFacebook,
-  },
-  {
-    label: "Chat with Golden Basket on WhatsApp",
+    label: "WhatsApp Direct Dispatch",
     href: "https://wa.me/256772421174",
     icon: FaWhatsapp,
   },
   {
-    label: "Follow Golden Basket on X (Twitter)",
+    label: "Facebook",
+    href: "https://facebook.com",
+    icon: FaFacebook,
+  },
+  {
+    label: "X (Twitter)",
     href: "https://x.com",
     icon: FaXTwitter,
   },
   {
-    label: "Subscribe to Golden Basket on YouTube",
+    label: "YouTube",
     href: "https://youtube.com",
     icon: FaYoutube,
   },
@@ -48,170 +46,163 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#102F14] text-white border-t border-[#e1bb3f]/25">
-      {/* Main 4-Column Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-        {/* Column 1: Brand Info */}
-        <div className="flex flex-col">
-          <div className="mb-4 flex items-center gap-3.5">
-            <Link
-              href="/"
-              className="rounded-full bg-light-gold-tint flex items-center justify-center w-16 h-16 ring-2 ring-[#e1bb3f]/40 shrink-0 shadow-md"
-            >
-              <Image
-                src="/Images/GB_logo.png"
-                alt="Golden Basket Logo"
-                width={56}
-                height={56}
-                className="object-contain rounded-full"
-              />
-            </Link>
-            <div>
-              <h2 className="text-lg font-bold text-[#e1bb3f] leading-tight">
-                Golden Basket Ltd
-              </h2>
-              <p className="text-xs text-[#F5E6A2]/90 font-medium italic mt-0.5">
-                &ldquo;Your choice of value&rdquo;
-              </p>
+    <footer className="bg-[#0c1a0e] text-white border-t border-white/15">
+      {/* Architectural 4-Column Grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+        {/* Column 1: Enterprise Identity */}
+        <div className="lg:col-span-4 p-8 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div className="mb-6 flex items-center gap-3.5">
+              <Link
+                href="/"
+                className="rounded-full bg-[#efe7d3] flex items-center justify-center w-14 h-14 border border-[#d9ae34]/60 shrink-0"
+              >
+                <Image
+                  src="/Images/GB_logo.png"
+                  alt="Golden Basket Logo"
+                  width={48}
+                  height={48}
+                  className="object-contain rounded-full"
+                />
+              </Link>
+              <div>
+                <h2 className="font-display text-xl font-bold text-white leading-none">
+                  Golden Basket Ltd
+                </h2>
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#d9ae34] mt-1.5">
+                  Your Choice of Value • Est. 2019
+                </p>
+              </div>
             </div>
-          </div>
 
-          <p className="text-sm text-gray-300 leading-relaxed mb-4">
-            Founded in 2019, Golden Basket Ltd is committed to transforming
-            livelihoods across East Africa through sustainable solar-powered
-            aquaculture, supplying premium catfish and fingerlings.
-          </p>
+            <p className="text-sm text-[#efe7d3]/75 leading-relaxed mb-6">
+              Ugandan aquaculture and agribusiness enterprise operating six solar-powered concrete
+              tanks in Gayaza, Wakiso District alongside founding crop farmland in Bweyale,
+              Kiryandongo District.
+            </p>
+          </div>
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e1bb3f] hover:text-[#F5E6A2] hover:underline transition-colors w-fit"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-[#d9ae34] hover:text-white transition-colors w-fit"
           >
-            <span>Learn more about our story</span>
-            <span aria-hidden="true">&rarr;</span>
+            <span>Read Full Monograph</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
-        {/* Column 2: Quick Links */}
-        <div>
-          <h3 className="text-base font-semibold mb-4 text-[#e1bb3f] tracking-wide uppercase">
-            Quick Links
+        {/* Column 2: Directory */}
+        <div className="lg:col-span-2 p-8 sm:p-10">
+          <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#d9ae34] mb-6">
+            01 / Directory
           </h3>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-3 text-sm">
             {QUICK_LINKS.map(({ label, href }) => (
               <li key={label}>
                 <Link
                   href={href}
-                  className="text-gray-300 hover:text-[#e1bb3f] transition-colors inline-flex items-center gap-2 group"
+                  className="text-[#efe7d3]/80 hover:text-[#d9ae34] transition-colors block"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#e1bb3f]/50 group-hover:bg-[#e1bb3f] transition-colors" />
-                  <span>{label}</span>
+                  {label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Column 3: Our Offerings */}
-        <div>
-          <h3 className="text-base font-semibold mb-4 text-[#e1bb3f] tracking-wide uppercase">
-            Our Offerings
+        {/* Column 3: Supply & Advisory */}
+        <div className="lg:col-span-3 p-8 sm:p-10">
+          <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#d9ae34] mb-6">
+            02 / Supply &amp; Advisory
           </h3>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-3 text-sm">
             {OFFERINGS.map(({ label, href }) => (
               <li key={label}>
                 <Link
                   href={href}
-                  className="text-gray-300 hover:text-[#e1bb3f] transition-colors inline-flex items-center gap-2 group"
+                  className="text-[#efe7d3]/80 hover:text-[#d9ae34] transition-colors block"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#e1bb3f]/50 group-hover:bg-[#e1bb3f] transition-colors" />
-                  <span>{label}</span>
+                  {label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Column 4: Contact & Connect */}
-        <div>
-          <h3 className="text-base font-semibold mb-4 text-[#e1bb3f] tracking-wide uppercase">
-            Contact &amp; Connect
-          </h3>
-          <ul className="space-y-3 text-sm text-gray-300 mb-6">
-            <li>
-              <Link
-                href="/contact"
-                className="flex items-start gap-2.5 hover:text-[#e1bb3f] transition-colors"
-              >
-                <HiOutlineLocationMarker className="text-[#e1bb3f] text-lg shrink-0 mt-0.5" />
-                <span>Wakiso District, Central Region, Uganda</span>
-              </Link>
-            </li>
-            <li>
-              <a
-                href="mailto:info@goldenbasket.ug"
-                className="flex items-center gap-2.5 hover:text-[#e1bb3f] transition-colors"
-              >
-                <MdEmail className="text-[#e1bb3f] text-lg shrink-0" />
-                <span>info@goldenbasket.ug</span>
-              </a>
-            </li>
-            <li className="flex items-start gap-2.5">
-              <IoCall className="text-[#e1bb3f] text-lg shrink-0 mt-0.5" />
-              <div className="flex flex-col space-y-0.5">
-                <a
-                  href="tel:+256772421174"
-                  className="hover:text-[#e1bb3f] transition-colors"
-                >
-                  +256 772 421 174
-                </a>
-                <a
-                  href="tel:+256756718377"
-                  className="hover:text-[#e1bb3f] transition-colors"
-                >
-                  +256 756 718 377
-                </a>
+        {/* Column 4: Gayaza Dispatch Desk */}
+        <div className="lg:col-span-3 p-8 sm:p-10 flex flex-col justify-between">
+          <div>
+            <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#d9ae34] mb-6">
+              03 / Gayaza Farm Desk
+            </h3>
+            <dl className="space-y-4 text-xs font-mono">
+              <div>
+                <dt className="text-white/45 uppercase">Aquaculture Hub</dt>
+                <dd className="text-[#efe7d3] mt-0.5">
+                  Gayaza, Wakiso District, Uganda
+                </dd>
               </div>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/256772421174"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-[#183113] bg-[#e1bb3f] hover:bg-[#f0cc55] px-3.5 py-2 rounded-lg transition-colors mt-1"
-              >
-                <FaWhatsapp className="text-base" />
-                <span>Chat on WhatsApp</span>
-              </a>
-            </li>
-          </ul>
+              <div>
+                <dt className="text-white/45 uppercase">Telephone &amp; WhatsApp</dt>
+                <dd className="mt-0.5 space-y-1">
+                  <a
+                    href="tel:+256772421174"
+                    className="block text-white hover:text-[#d9ae34] transition-colors"
+                  >
+                    +256 772 421 174
+                  </a>
+                  <a
+                    href="tel:+256756718377"
+                    className="block text-[#efe7d3]/80 hover:text-[#d9ae34] transition-colors"
+                  >
+                    +256 756 718 377
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-white/45 uppercase">Electronic Mail</dt>
+                <dd className="mt-0.5">
+                  <a
+                    href="mailto:info@goldenbasket.ug"
+                    className="text-white hover:text-[#d9ae34] transition-colors"
+                  >
+                    info@goldenbasket.ug
+                  </a>
+                </dd>
+              </div>
+            </dl>
+          </div>
 
-          {/* Social Icons */}
-          <div className="flex items-center gap-2.5">
-            {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-9 h-9 rounded-full bg-white/10 text-white hover:bg-[#e1bb3f] hover:text-[#183113] flex items-center justify-center transition-all duration-200 shadow-sm"
-              >
-                <Icon className="text-base" />
-              </a>
-            ))}
+          <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-white/45">
+              Connect
+            </span>
+            <div className="flex items-center gap-3">
+              {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-[#efe7d3]/75 hover:text-[#d9ae34] transition-colors"
+                >
+                  <Icon className="text-sm" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Copyright Bar */}
-      <div className="bg-[#F5E6A2] text-[#183113] border-t border-[#e1bb3f]/40">
-        <div className="max-w-7xl mx-auto px-6 py-3.5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs font-medium">
+      {/* Bottom Colophon Bar */}
+      <div className="bg-[#122615] border-t border-white/15">
+        <div className="max-w-7xl mx-auto px-8 sm:px-10 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 font-mono text-[11px] text-[#efe7d3]/70">
           <p>
-            Copyright &copy; {new Date().getFullYear()} Golden Basket Limited.
-            All rights reserved.
+            &copy; {new Date().getFullYear()} GOLDEN BASKET LIMITED. ALL RIGHTS RESERVED.
           </p>
-          <p className="text-[#183113]/80">
-            Sustainable Aquaculture &bull; Wakiso District, Uganda
+          <p className="uppercase tracking-widest text-[#d9ae34]">
+            00°27&apos;N 32°36&apos;E • WAKISO &amp; KIRYANDONGO, UGANDA
           </p>
         </div>
       </div>
