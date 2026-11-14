@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Golden Basket Ltd — Official Website
+
+Corporate agribusiness website for **Golden Basket Ltd** (Uganda), built with **Next.js 15 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**.
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and start the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — Start development server with Turbopack
+- `npm run build` — Create an optimized production build
+- `npm run start` — Start the production server
+- `npm run lint` — Run ESLint checks
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## CI/CD Pipeline (GitHub Actions + Vercel)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The workflow in [`.github/workflows/ci-cd.yml`](.github/workflows/ci-cd.yml) runs automatically on every push and pull request targeting `main`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Continuous Integration (`ci` job)**:
+   - Installs dependencies via `npm ci`
+   - Runs TypeScript type checking (`npx tsc --noEmit`)
+   - Runs ESLint (`npm run lint`)
+   - Verifies the Next.js production build (`npm run build`)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Continuous Deployment to Vercel (`deploy-preview` & `deploy-production` jobs)**:
+   - **Mode A — Connected Vercel GitHub App (Zero-Config Default)**: Because `vercel[bot]` is connected to this repository, pushes and pull requests automatically deploy once checks complete.
+   - **Mode B — Direct Vercel CLI Deployment via GitHub Actions**: To have GitHub Actions build and push prebuilt artifacts directly to Vercel using `vercel deploy --prebuilt`, add the following three **Repository Secrets** under **Settings → Secrets and variables → Actions**:
+     - `VERCEL_TOKEN`: Personal Access Token created at [vercel.com/account/tokens](https://vercel.com/account/tokens)
+     - `VERCEL_ORG_ID`: Your Vercel Team/User ID (`orgId` in `.vercel/project.json` after running `npx vercel link`)
+     - `VERCEL_PROJECT_ID`: Your Vercel Project ID (`projectId` in `.vercel/project.json` after running `npx vercel link`)
