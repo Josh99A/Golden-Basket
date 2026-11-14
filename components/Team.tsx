@@ -6,7 +6,7 @@ const teamNotes: Record<string, { focus: string; location: string }> = {
     focus: 'Enterprise Strategy, NSSF Hi-Innovator Fellow & Community Agribusiness',
     location: 'Gayaza & Bweyale',
   },
-  'Linda Diana': {
+  'Lindrio Diana': {
     focus: 'Supply Chain Coordination, Partner Relations & Financial Administration',
     location: 'Wakiso District',
   },

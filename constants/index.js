@@ -6,7 +6,7 @@ const team = [
     bio: 'Aquaculture entrepreneur driving sustainable catfish production and rural women empowerment in Uganda.',
   },
   {
-    name: 'Linda Diana',
+    name: 'Lindrio Diana',
     role: 'Administrative Manager',
     image: '/Images/team/lindrio.png',
     bio: 'Oversees daily operations, partner relations, and quality assurance across Golden Basket distribution channels.',
